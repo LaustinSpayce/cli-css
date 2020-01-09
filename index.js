@@ -54,13 +54,13 @@ function rgbToHsl(r, g, b){
 
 let inputType = process.argv[2].toLowerCase();
 
-if (inputType === "hex") {
+if (inputType === "hex" && process.argv.length === 4) {
     let returnRGB;
     returnRGB = hexToRgb(process.argv[3]);
     returnHSL = rgbToHsl(returnRGB.r, returnRGB.g, returnRGB.b);
     console.log("R: " + returnRGB.r + " G: " + returnRGB.g + " B: " + returnRGB.b);
     console.log("H: " + returnHSL.h + " S: " + returnHSL.s + "% L: " + returnHSL.l + "%");
-} else if (inputType === "rgb") {
+} else if (inputType === "rgb" && process.argv.length === 6) {
     let returnValue;
     let inputR = parseInt(process.argv[3]);
     let inputG = parseInt(process.argv[4]);
