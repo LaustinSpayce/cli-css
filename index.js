@@ -69,4 +69,6 @@ if (inputType === "hex") {
     returnHSL = rgbToHsl(inputR, inputG, inputB);
     console.log("HEX: " + returnValue);
     console.log("H: " + returnHSL.h + " S: " + returnHSL.s + "% L: " + returnHSL.l + "%");
+} else {
+    console.log("Error in input.");
 }
