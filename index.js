@@ -46,7 +46,7 @@ function rgbToHsl(r, g, b){
         }
         h /= 6;
     }
-    h = h * 360;
+    h = Math.round(h * 360);
     s = Math.round(s * 100);
     l = Math.round(l * 100);
     return {h : h,  s : s, l : l};
@@ -72,3 +72,9 @@ if (inputType === "hex" && process.argv.length === 4) {
 } else {
     console.log("Error in input.");
 }
+
+// var r = 255;
+// var b = 0;
+// var g = 0;
+
+// console.log(`\x1b[38;2;${r};${g};${b}m%s\x1b[0m`, "Some string to test");
